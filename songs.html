@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title>Song List</title>
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+
+        table, th, td, tr {
+        border: 2px solid black;
+        border-collapse: collapse;
+
+    }
+    th{
+        text-align: center;
+        background-color: blueviolet;
+        padding: 6px;
+    }
+
+    td{
+        text-align: center;
+    }
+
+    #rcorners1 {
+    border-radius: 25px;
+    background: #5d69eb;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+    }
+
+    @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: garamond;
+            font-size: 3em;
+            color: darkblue;
+            animation: floating 2s ease-in-out infinite;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white">
+    <nav class="w-full py-4 bg-blue-800 shadow">
+         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+    
+            <nav>
+                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="homepage.html" target="_self">MIMIY's SPACE</a></li>
+                </ul>
+            </nav>
+    
+            <div class="flex items-center text-lg no-underline text-white pr-6">
+                <a class="pl-6" href="https://mail.google.com/mail/u/0/#inbox">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a class="pl-6" href="https://www.instagram.com/__mimiys/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="pl-6" href="https://www.bandlab.com/miyyx">
+                    <i class="fab fa-itunes-note"></i>
+                </a>
+                <a class="pl-6" href="https://www.youtube.com/@miyyx">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    
+    </nav>
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                SONG LIST
+            </a>
+            <p class="text-lg text-gray-600">
+            <i>let's see Mimiy's favorites!</i>
+            </p>
+        </div>
+    </header>
+
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="biodata.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Biodata</a>
+                <a href="equine.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Equine</a>
+                <a href="songs.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Song Lists</a>
+                <a href="mwmb.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">MWMB</a>
+                <a href="gallery.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Gallery</a>
+            </div>
+        </div>
+    </nav>
+<body>
+    <h1 align="center"><b> ~Mimiy's Recommendation~ </b></h1>
+    
+    <table align="center">
+        <tr>
+            <th colspan="4" style="font-size: 35px;">BOY GROUP</th>
+        </tr>
+        <tr>
+            <th>Album Photo</th>
+            <th>Song Name</th>
+            <th>Group Name</th>
+            <th>Song Audio</th>
+        </tr>
+        <tr>
+            <td><a href="https://open.spotify.com/track/0f0SbtoKGe41cX5LzlnX6X"><img src= "IMAGES/tinnitus.png"></a></td>
+            <td> Tinnitus (Wanna be a rock) </td>
+            <td> Tomorrow x Together </td>
+            <td><audio controls>
+                <source src="AUDIOS/Tinnitus.mp3" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio></td>  
+        </tr>
+    </table>
+
+<br>
+<br>
+
+    <table align="center">
+        <tr>
+            <th colspan="4" style="font-size: 35px;">GIRL GROUP</th>
+        </tr>
+        <tr>
+            <th>Album Photo</th>
+            <th>Song Name</th>
+            <th>Group Name</th>
+            <th>Song Audio</th>
+        </tr>
+        <tr>
+            <td><a href="https://open.spotify.com/track/5eWcGfUCrVFMoYskyfkEPE"><img src= "IMAGES/cosmiclove.jpg"></a></td>
+            <td> Cosmic </td>
+            <td> Red Velvet </td>
+            <td><audio controls>
+                <source src="AUDIOS/Cosmic.mp3" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio></td>  
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,186 @@
+<html>
+<head>
+    <title>Equine Page</title>
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+    </style>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white">
+    <nav class="w-full py-4 bg-blue-800 shadow">
+         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+    
+            <nav>
+                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+                    <li><a class="hover:text-gray-200 hover:underline px-4" href="homepage.html" target="_self">MIMIY's SPACE</a></li>
+                </ul>
+            </nav>
+    
+            <div class="flex items-center text-lg no-underline text-white pr-6">
+                <a class="pl-6" href="https://mail.google.com/mail/u/0/#inbox">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a class="pl-6" href="https://www.instagram.com/__mimiys/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="pl-6" href="https://www.bandlab.com/miyyx">
+                    <i class="fab fa-itunes-note"></i>
+                </a>
+                <a class="pl-6" href="https://www.youtube.com/@miyyx">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    
+    </nav>
+    <header class="w-full container mx-auto">
+        <div class="flex flex-col items-center py-12">
+            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
+                EQUINE'S PHOTOBOOK
+            </a>
+            <p class="text-lg text-gray-600">
+            <i>Throwback with Mimiy!</i>
+            </p>
+        </div>
+    </header>
+
+    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
+                <a href="biodata.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Biodata</a>
+                <a href="equine.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Equine</a>
+                <a href="songs.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Song Lists</a>
+                <a href="mwmb.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">MWMB</a>
+                <a href="gallery.html" class="hover:bg-gray-400 rounded py-2 px-4 mx-2">Gallery</a>
+            </div>
+        </div>
+    </nav>
+    <div class="header" id="myHeader">
+        <p><i>Click on the buttons to change the grid view</i></p>
+        <button class="btn active" onclick="two()">2</button>
+        <button class="btn" onclick="four()">3</button>
+      </div>
+      
+      <!-- Photo Grid -->
+      <div class="row"> 
+        <div class="column">
+          <img src="IMAGES/equine1.jpg" style="width:100%">
+          <img src="IMAGES/equine2.jpg" style="width:100%">
+          <img src="IMAGES/equine5.jpg" style="width:100%">
+
+        </div>
+        <div class="column">
+          <img src="IMAGES/equine3.jpg" style="width:100%">
+          <img src="IMAGES/equine8.jpg" style="width:100%">
+          <img src="IMAGES/equine6.jpg" style="width:100%">
+        </div>  
+        <div class="column">
+          <img src="IMAGES/equine4.jpg" style="width:100%">
+          <img src="IMAGES/equine9.jpg" style="width:100%">
+          <img src="IMAGES/equine7.jpg" style="width:100%">
+        </div>
+      </div>
+      
+      <script>
+      // Get the elements with class="column"
+      var elements = document.getElementsByClassName("column");
+      
+      // Declare a loop variable
+      var i;
+      
+      // Full-width images
+      function one() {
+          for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "100%";  // IE10
+          elements[i].style.flex = "100%";
+        }
+      }
+      
+      // Two images side by side
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%";  // IE10
+          elements[i].style.flex = "50%";
+        }
+      }
+      
+      // Four images side by side
+      function four() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "25%";  // IE10
+          elements[i].style.flex = "25%";
+        }
+      }
+      
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+</body> 
+</html>
